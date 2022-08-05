@@ -30,7 +30,7 @@ function Crypto() {
         })} 
         <Footer />
         </div>
-     );
+     )
 }
 
 export default Crypto

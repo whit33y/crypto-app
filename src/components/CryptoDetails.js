@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from 'react-router-dom'
 function CryptoDetails(props) {
     return (
         <div className="cryptoDetails">
@@ -9,6 +10,7 @@ function CryptoDetails(props) {
                 <li><b>All time high:</b> {props.ath}$</li>
                 <li><b>All time low:</b> {props.atl}$</li>
             </ul>
+            <Link to={`/alldetails?q=${props.id}`}>View even more</Link>
             <p className='cryptoDetailsUpdate'><b>Last updated:</b> {props.last_updated}</p>
         </div>
     );
