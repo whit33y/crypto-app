@@ -2,25 +2,19 @@ import React from 'react'
 import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
 import {useEffect, useState} from 'react'
-import ShowAllDetails from './ShowAllDetails'
+
 
 function AllCryptoDetails() {
-    const [cryptoData, setCryptoData] = useState(null)
-    const [loaded, setLoaded] = useState(false)
-    const [search, setSearch] = useState('')
+    const [cryptoData, setCryptoData] = useState()
     useEffect(()=>{
         let search = window.location.search
         let params = new URLSearchParams(search)
         let foo = params.get('q')
-        setSearch(foo)
-        setLoaded(true)
-    },[])
-    useEffect(()=>{
-        fetch(`https://api.coingecko.com/api/v3/coins/${search}?localization=true`)
+        fetch(`https://api.coingecko.com/api/v3/coins/${foo}?localization=true`)
         .then((res)=> res.json())
-        // .then((data)=> setCryptoData({data}))
-        // .then((data)=>setCryptoData(data))
-    },[loaded])
+        .then((data)=>setCryptoData(data))
+    },[])
+
     if(!cryptoData){
         return(
             <div className='container'>
@@ -32,9 +26,9 @@ function AllCryptoDetails() {
     return (
         <div className='container'>
             <Navbar />
-            {cryptoData  && cryptoData.map(data=>{
-                    return <ShowAllDetails name={data.name}/>
-            })} 
+                <img src={`${cryptoData.image.large}`} className='showCryptoImg'/>
+                <h3>{cryptoData.name} - {cryptoData.symbol}</h3>
+                <p className='caption'>Hashing algorithm: {cryptoData.hashing_algorithm}</p>
             <Footer />
         </div>
     );
