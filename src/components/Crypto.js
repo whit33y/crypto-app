@@ -26,7 +26,7 @@ function Crypto() {
             return <ShowCrypto 
                 name={data.name} current_price={data.current_price} image={data.image} 
                 highest_24h={data.high_24h}lowest_24h={data.low_24h} price_change_percentage_24h={data.price_change_percentage_24h} symbol={data.symbol} ath={data.ath} atl={data.atl}
-                ath_date={data.ath_date} price_change_24h={data.price_change_24h} last_updated={data.last_updated}/>
+                ath_date={data.ath_date} price_change_24h={data.price_change_24h} last_updated={data.last_updated} id={data.id}/>
         })} 
         <Footer />
         </div>
