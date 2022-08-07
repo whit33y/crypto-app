@@ -11,33 +11,34 @@ function Navbar() {
       navigate('/login')
     } 
     return (
-        <div>
-        <nav className='navbarContainer'>
-           <ul className='navbarLinks'>
-            <div>
-                <li>
-                    <Link to='/'>Home</Link>
+        <div className='container mx-auto mb-3'>
+        <nav className='mb-4 bg-blue-300 pb-3 pt-3'>
+           <ul className='flex justify-between'>
+            <div className='flex justify-between text-slate-50	'>
+                <li className='mr-10'> 
+                    <Link to='/' className='text-2xl'>Home</Link>
                 </li>
                 {user ?               
-                <li>
-                    <Link to='/crypto'>Cryptos</Link> 
+                <li className='mr-10'>
+                    <Link to='/crypto' className='text-2xl'>Cryptos</Link> 
                 </li>      
                 : ''}  
-                <li>
-                    <Link to='/about'>About</Link>
+                <li className='mr-10'>
+                    <Link to='/about' className='text-2xl'>About</Link>
                 </li>  
+            </div>
                 {
-                user ? <li>
-                    <button onClick={handleSignOut} className='navbarLogoutBtn'>Logout</button>
+                user ? 
+                <li>
+                    <button onClick={handleSignOut} className='text-2xl text-slate-50' >Logout</button>
                 </li>  :
                 <li>
-                    <Link to='/login'>Log in</Link>
+                    <Link to='/login' className='text-2xl '>Log in</Link>
                 </li>
-                }      
-            </div>       
+                }          
             </ul> 
         </nav>
-        <h1>Crypto app</h1>
+        <h1 class='text-5xl mb-5 text-center'>Crypto app</h1>
         </div>
     );
 }

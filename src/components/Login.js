@@ -31,7 +31,7 @@ export function Login(){
         }
     }
     return(
-        <div className='container'>
+        <div className='container  mx-auto'>
             <Navbar />
             <form onSubmit={handleSubmit}>
                 <label htmlFor='input-email'>Email</label>

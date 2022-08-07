@@ -17,15 +17,16 @@ function AllCryptoDetails() {
     
     if(!cryptoData){
         return(
-            <div className='container'>
+            <div className='container mx-auto'>
                 <Navbar />
                 <Footer />
             </div>
         )
     }
     return (
-        <div className='container'>
+        <div className='container mx-auto'>
             <Navbar />
+            <div className='flex justify-center'>
             <button><a href='/crypto'>Back to cryptos</a></button>
             <div className='showCryptoHeader'>
                 <img src={`${cryptoData.image.large}`} className='showCryptoImg'/>
@@ -44,6 +45,7 @@ function AllCryptoDetails() {
                 </div>
             <div className='showCryptoFooter'>
                 <h6>Last update: {cryptoData.last_updated}</h6>
+            </div>
             </div>
             </div>
             <Footer />
