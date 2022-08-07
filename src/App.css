@@ -1,4 +1,4 @@
-html, body{
+/* html, body{
     height: 100%;
     margin: 0;
     padding: 0;
@@ -76,4 +76,7 @@ footer{
 .showCryptoHeader h6{
     margin-top: 0px;
     margin-bottom: 0px;
-}
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
