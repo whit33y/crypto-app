@@ -4,10 +4,10 @@ import Footer from '../layouts/Footer'
 
 function About() {
     return (  
-        <div className='container'>
-            <Navbar />
-            <p>By Kubuulek</p>
-            <Footer />
+        <div className='container flex flex-col h-screen justify-between mx-auto'>
+            <Navbar className='h-10'/>
+            <main className='mb-auto h-10'><p>By Kubuulek</p></main>
+            <Footer className='h-10'/>
         </div>
     );
 }

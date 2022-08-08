@@ -8,7 +8,7 @@ import { useAuth } from '../contexts/Auth'
 function Welcome() {
     const { user } = useAuth()
     return (
-        <div className='container mx-auto'>
+        <div className='container flex flex-col h-screen justify-between mx-auto'>
             <Navbar />
             <h3>Welcome to crypto app</h3>
             <div>

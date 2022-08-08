@@ -17,14 +17,14 @@ function AllCryptoDetails() {
     
     if(!cryptoData){
         return(
-            <div className='container mx-auto'>
+            <div className='container flex flex-col h-screen justify-between mx-auto'>
                 <Navbar />
                 <Footer />
             </div>
         )
     }
     return (
-        <div className='container mx-auto'>
+        <div className='container flex flex-col h-screen justify-between mx-auto'>
             <Navbar />
             <div className='flex justify-center'>
             <button><a href='/crypto'>Back to cryptos</a></button>

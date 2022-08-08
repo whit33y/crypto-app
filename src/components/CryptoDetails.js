@@ -12,7 +12,7 @@ function CryptoDetails(props) {
                 <li><b>All time low:</b> {props.atl}$</li> */}
             </ul>
             <div className="flex justify-center">
-            <Link className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-center text-1' to={`/alldetails?q=${props.id}` }>View  more</Link>
+            <Link className='bg-blue-300 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full text-center text-1' to={`/alldetails?q=${props.id}` }>View  more</Link>
             </div>
             <p className="text-center"><b>Last updated:</b> {props.last_updated}</p>
         </div>

@@ -27,14 +27,18 @@ export function Signup(){
         }
     }
     return(
-        <div className='container  mx-auto'>
+        <div className='container flex flex-col h-screen justify-between mx-auto'>
             <Navbar />
             <form onSubmit={handleSubmit}>
-                <label htmlFor='input-email'>Email</label>
-                <input id='input-email' type='email' ref={emailRef} />
-                <label htmlFor='input-password'>Password</label>
-                <input id='input-password' type='password' ref={passwordRef} />
-                <button type='submit'>Sign up</button>
+            <div class="relative">
+                <label class="block text-xs font-medium text-gray-500" htmlFor='input-email'> Email </label>
+                <input class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-email' type='email' ref={emailRef} />
+            </div>
+            <div class="relative mb-3">
+                <label class="block text-xs font-medium text-gray-500" htmlFor='input-password'> Password </label>
+                <input class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-password' type='password' ref={passwordRef} />
+            </div>
+                <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-1xl'>Sign up</button>
             </form>
             <p>
                 Already have an account? <Link to="/login">Log In</Link>
