@@ -26,27 +26,32 @@ function AllCryptoDetails() {
     return (
         <div className='container flex flex-col h-screen justify-between mx-auto'>
             <Navbar />
-            <div className='flex justify-center'>
-            <button><a href='/crypto'>Back to cryptos</a></button>
-            <div className='showCryptoHeader'>
-                <img src={`${cryptoData.image.large}`} className='showCryptoImg'/>
-                <h2>{cryptoData.name} - {cryptoData.symbol}</h2>
-                <h6>Market rank: {cryptoData.market_cap_rank}</h6>
+            <div className='container flex flex-col h-screen justify-between mx-auto text-center'>
+            <button className='font-extrabold'><a href='/crypto'>Back to cryptos<span className="material-symbols-outlined font-extrabold">arrow_back</span></a></button>
+            <div className='flex flex-col justify-center'>
+                <img src={`${cryptoData.image.large}`} className='h-48 w-48 mx-auto'/>
+                <p className='text-2xl font-bold'>{cryptoData.name} - {cryptoData.symbol}</p>
+                <p className='text-sm'><b>Market rank:</b>{cryptoData.market_cap_rank}</p>
             </div>
-            <div className='showCryptoContent'>
-                <p>Highest price(24h): {cryptoData.market_data.high_24h.usd} USD <br />Lowest price(24h): {cryptoData.market_data.low_24h.usd} USD <br /> Price change(24h): {Math.floor(cryptoData.market_data.price_change_24h_in_currency.usd * 1000)/1000} USD</p>
+            <div className='flex flex-col justify-center text-center text-lg'>
+                <hr/>
+                <b><p>Latest price changes</p></b>
+                <p><b>Highest price(24h):</b> {cryptoData.market_data.high_24h.usd} USD 🇺🇸<br /><b>Lowest price(24h):</b> {cryptoData.market_data.low_24h.usd} USD 🇺🇸<br /><b>Price change(24h):</b> {Math.floor(cryptoData.market_data.price_change_24h_in_currency.usd * 1000)/1000} USD 🇺🇸</p>
+                <hr />
                 <b><p>Current price in different currencies</p></b> 
-                <p>🇺🇸 {cryptoData.market_data.current_price.usd}usd 🇵🇱 {cryptoData.market_data.current_price.pln}pln 🇪🇺 {cryptoData.market_data.current_price.eur}eur 🇯🇵 {cryptoData.market_data.current_price.jpy}jpy<br/> 🇨🇳{cryptoData.market_data.current_price.cny}cny 🇬🇧{cryptoData.market_data.current_price.gbp}gbp 🇦🇺{cryptoData.market_data.current_price.aud}aud🇨🇭{cryptoData.market_data.current_price.chf}chf</p>
-                <p>All time highest price: {cryptoData.market_data.ath.usd} usd 📈<br />All time lowest price: {cryptoData.market_data.atl.usd} usd 📉</p>
-                <div className='showCryptoLinks'>
-                <a href={cryptoData.links.homepage[0]}>Visit official {cryptoData.name} website <img src={`${cryptoData.image.thumb}`}/></a>
-                <br />
-                <a href={cryptoData.links.official_forum_url[0]}>Visit official {cryptoData.name} community forum <img src={`${cryptoData.image.thumb}`}/></a>
+                <p>🇺🇸 {cryptoData.market_data.current_price.usd}usd 🇵🇱 {cryptoData.market_data.current_price.pln}pln 🇪🇺 {cryptoData.market_data.current_price.eur}eur 🇯🇵 {cryptoData.market_data.current_price.jpy}jpy<br/> 🇨🇳{cryptoData.market_data.current_price.cny}cny 🇬🇧{cryptoData.market_data.current_price.gbp}gbp 🇦🇺{cryptoData.market_data.current_price.aud}aud🇨🇭{cryptoData.market_data.current_price.chf}chf</p><hr/>
+                <b><p>Highest/lowest prices of all time</p></b>
+                <p><b>All time highest price:</b> {cryptoData.market_data.ath.usd} usd 📈<br /><b>All time lowest price:</b> {cryptoData.market_data.atl.usd} usd 📉</p>
+                <hr />
+            </div>
+            <div className='flex flex-col justify-center'>
+                <a href={cryptoData.links.homepage[0]} className='underline font-extrabold'>Visit official {cryptoData.name} website </a>
+                <a href={cryptoData.links.official_forum_url[0]} className='underline font-extrabold'>Visit official {cryptoData.name} community forum </a>
                 </div>
             <div className='showCryptoFooter'>
-                <h6>Last update: {cryptoData.last_updated}</h6>
+                <p className='text-sm'><b>Last update:</b> {cryptoData.last_updated}</p>
             </div>
-            </div>
+            
             </div>
             <Footer />
         </div>
