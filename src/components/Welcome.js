@@ -18,7 +18,7 @@ function Welcome() {
       >
         <img
           class="absolute inset-0 object-cover w-full h-full"
-          src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+          src='https://images.unsplash.com/photo-1645731504293-ad4d5da42a10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80'
           alt="Man using a computer"
         />
       </div>

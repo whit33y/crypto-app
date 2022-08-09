@@ -27,7 +27,7 @@ function AllCryptoDetails() {
         <div className='container flex flex-col h-screen justify-between mx-auto'>
             <Navbar />
             <div className='container flex flex-col h-screen justify-between mx-auto text-center'>
-            <button className='font-extrabold'><a href='/crypto'>Back to cryptos<span className="material-symbols-outlined font-extrabold">arrow_back</span></a></button>
+            <button className='font-extrabold'><a href='/crypto'>Click here to go back<span className="material-symbols-outlined font-extrabold">arrow_back</span></a></button>
             <div className='flex flex-col justify-center'>
                 <img src={`${cryptoData.image.large}`} className='h-48 w-48 mx-auto'/>
                 <p className='text-2xl font-bold'>{cryptoData.name} - {cryptoData.symbol}</p>

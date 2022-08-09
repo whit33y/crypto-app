@@ -45,8 +45,8 @@ export function Signup(){
             </div>
                 <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-1xl'>Sign up</button>
             </form>
-            <p>
-                Already have an account? <Link to="/login">Log In</Link>
+            <p className='text-bold'>
+                Already have an account? <Link to="/login" className='underline'>Log In</Link>
             </p>
             <Footer />
             </div>

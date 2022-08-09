@@ -15,6 +15,7 @@ function Crypto() {
         return(
             <div className='container mx-auto'>
                 <Navbar />
+                    <p className='text-bold text-center'>Loading data...</p>
                 <Footer />
             </div>
         )

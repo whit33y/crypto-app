@@ -6,6 +6,7 @@ import {Signup} from './components/Signup'
 import Welcome from './components/Welcome'
 import Crypto from './components/Crypto'
 import About from './components/About'
+import NotFound from './components/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
 import AllCryptoDetails from './components/AllCryptoDetails'
 import { Navigate } from 'react-router-dom'
@@ -29,6 +30,7 @@ function App() {
         <Route path='/crypto' element={<ProtectedRoute><Crypto /></ProtectedRoute>} />
         <Route path='/alldetails' element={<ProtectedRoute><AllCryptoDetails /></ProtectedRoute>}/>
         <Route path='/about' element={<About />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
     </AuthProvider>

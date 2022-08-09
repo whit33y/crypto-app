@@ -8,7 +8,7 @@ function ShowCrypto(props) {
     }
     return (
     <div className="flex flex-col mb-10">
-        <img src={`${props.image}`} className='h-48 w-48 mx-auto'/>
+        <img src={`${props.image}`} className='h-30 w-40 mx-auto'/>
         <h3 className='text-center text-3xl'>{props.name}</h3>
     <div className="flex justify-center">
         <button className='bg-blue-300 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full text-1xl' onClick={()=>handleDetails()}><b>{details ? 'HIDE DETAILS' : 'MORE DETAILS'}</b></button>
