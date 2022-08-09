@@ -32,7 +32,7 @@ export function Signup(){
     return(
         <div className='container flex flex-col h-screen justify-between mx-auto'>
             {user ? <Welcome /> :
-            <div>
+            <div className='container flex flex-col h-screen justify-between mx-auto'>
             <Navbar />
             <form onSubmit={handleSubmit}>
             <div class="relative">

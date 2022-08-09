@@ -6,10 +6,10 @@ function Footer() {
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm text-white dark:text-white sm:mt-0">
         <li>
-            <a href="/about" class="mr-4 hover:underline md:mr-6 ">About</a>
+            <a href="/about" class="mr-4 hover:underline md:mr-6 ">About <span class="material-symbols-outlined">explore</span></a>
         </li>
         <li>
-            <a href="/contact" class="mr-4 hover:underline md:mr-6">Contact</a>
+            <a href="/contact" class="mr-4 hover:underline md:mr-6">Contact <span class="material-symbols-outlined">smartphone</span></a>
         </li>
     </ul>
 </footer>

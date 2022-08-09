@@ -9,17 +9,14 @@ import About from './components/About'
 import NotFound from './components/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
 import AllCryptoDetails from './components/AllCryptoDetails'
-import { Navigate } from 'react-router-dom'
+import Contact from './components/Contact'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { AuthProvider, useAuth } from './contexts/Auth'
+import { AuthProvider } from './contexts/Auth'
 
 
 function App() {
-    // const  user  = useAuth();
-    // const PrivateOutlet = () => {
-    // return user ? <Welcome /> : <Navigate to="/login" />;
-    // };
+
   return (
     <AuthProvider>
     <Router>
@@ -30,6 +27,7 @@ function App() {
         <Route path='/crypto' element={<ProtectedRoute><Crypto /></ProtectedRoute>} />
         <Route path='/alldetails' element={<ProtectedRoute><AllCryptoDetails /></ProtectedRoute>}/>
         <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>

@@ -8,7 +8,8 @@ import { useAuth } from '../contexts/Auth'
 function Welcome() {
     const { user } = useAuth()
     return (
-        <div className='container flex flex-col mx-auto'>
+        <div className='container flex flex-col justify-between h-screen mx-auto'>
+          
             <Navbar />
             <section>
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">

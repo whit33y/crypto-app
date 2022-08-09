@@ -19,6 +19,7 @@ function AllCryptoDetails() {
         return(
             <div className='container flex flex-col h-screen justify-between mx-auto'>
                 <Navbar />
+                <p className='text-bold text-center'>Loading data...</p>
                 <Footer />
             </div>
         )
