@@ -38,7 +38,7 @@ function Navbar() {
                 }          
             </ul> 
         </nav>
-        <h1 class='text-5xl mb-2 text-center'>Crypto app</h1>
+        <h1 class='text-5xl font-bold sm:text-4xl text-center'>Crypto app ™️</h1>
         </div>
     );
 }
