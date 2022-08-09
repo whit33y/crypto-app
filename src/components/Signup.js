@@ -2,6 +2,7 @@ import {useRef, useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
+import Welcome from './Welcome'
 
 import { useAuth } from '../contexts/Auth'
 
@@ -26,8 +27,12 @@ export function Signup(){
             navigate('/')
         }
     }
+    const {user} = useAuth()
+
     return(
         <div className='container flex flex-col h-screen justify-between mx-auto'>
+            {user ? <Welcome /> :
+            <div>
             <Navbar />
             <form onSubmit={handleSubmit}>
             <div class="relative">
@@ -44,6 +49,8 @@ export function Signup(){
                 Already have an account? <Link to="/login">Log In</Link>
             </p>
             <Footer />
+            </div>
+            }
         </div>
     )
 }

@@ -8,11 +8,17 @@ import Crypto from './components/Crypto'
 import About from './components/About'
 import ProtectedRoute from './components/ProtectedRoute'
 import AllCryptoDetails from './components/AllCryptoDetails'
-
+import { Navigate } from 'react-router-dom'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { AuthProvider } from './contexts/Auth'
+import { AuthProvider, useAuth } from './contexts/Auth'
+
+
 function App() {
+    // const  user  = useAuth();
+    // const PrivateOutlet = () => {
+    // return user ? <Welcome /> : <Navigate to="/login" />;
+    // };
   return (
     <AuthProvider>
     <Router>
