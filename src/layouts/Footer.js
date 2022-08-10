@@ -1,4 +1,5 @@
 import React from 'react';
+
 function Footer() {
     return (
         <footer class="p-4 bg-blue-300 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-blue-300">

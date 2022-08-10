@@ -1,7 +1,8 @@
 import React from 'react'
+
 import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
-import {Link} from 'react-router-dom'
+
 import { useAuth } from '../contexts/Auth'
 
 

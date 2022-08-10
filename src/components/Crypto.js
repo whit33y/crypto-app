@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
+
 import ShowCrypto from './ShowCrypto'
+
 import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
 
 function Crypto() {
     const [cryptos, setCryptos] = useState(null)
     const [search, setSearch] = useState('')
-    // const [cryptoNames, setCryptoNames] = useState()
     const cryptoNames = []
     useEffect(()=>{
         fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
@@ -15,8 +16,8 @@ function Crypto() {
     },[])
     useEffect(()=>{
         for(let i=0; i<cryptoNames.length; i++){
-            if(search===cryptoNames[i]){
-                console.log('WORKING')
+            if(cryptoNames[i].includes(search)){
+                console.log(cryptoNames[i])
             }
         }
     },[search])
@@ -32,6 +33,7 @@ function Crypto() {
     }
     return (
         <div className='container mx-auto'>
+
             <Navbar />
             <div>
                 <form>
@@ -39,7 +41,6 @@ function Crypto() {
                     <input class="w-half p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-search' type='text' onChange={event=> setSearch(event.target.value.toLowerCase())} placeholder='search for crypto'/>
                 </div>
                 </form>
-                <h1>{search}</h1>
         {cryptos  && cryptos.map(data=>{
             return <ShowCrypto 
                 name={data.name} current_price={data.current_price} image={data.image} 
@@ -50,6 +51,7 @@ function Crypto() {
             cryptoNames.push(data.name.toLowerCase())
         })} 
         </div>
+
         <Footer />
         </div>
      )
