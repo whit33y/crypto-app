@@ -44,10 +44,11 @@ export function Signup(){
                 <input class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-password' type='password' ref={passwordRef} />
             </div>
                 <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-1xl'>Sign up</button>
-            </form>
             <p className='text-bold'>
                 Already have an account? <Link to="/login" className='underline'>Log In</Link>
             </p>
+            </form>
+            
             <Footer />
             </div>
             }
