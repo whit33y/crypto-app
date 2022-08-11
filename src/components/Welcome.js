@@ -13,23 +13,23 @@ function Welcome() {
           
             <Navbar />
             <section>
-  <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
+  <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
       <div
-        class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last"
+        className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last"
       >
         <img
-          class="absolute inset-0 object-cover w-full h-full"
+          className="absolute inset-0 object-cover w-full h-full"
           src='https://images.unsplash.com/photo-1645731504293-ad4d5da42a10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80'
           alt="Man using a computer"
         />
       </div>
 
-      <div class="lg:py-24">
-        <h2 class="text-3xl font-bold sm:text-4xl">Check our powerful Crypto app ™️</h2>
+      <div className="lg:py-24">
+        <h2 className="text-3xl font-bold sm:text-4xl">Check our powerful Crypto app ™️</h2>
 
         {user ? 
-         <p class="mt-4 text-gray-600">
+         <p className="mt-4 text-gray-600">
          Get the most accurate crypto data, <br/>
          check current prices, last price changes,<br/>
          all time highest/lowest prices and so much more!<br/>
@@ -37,7 +37,7 @@ function Welcome() {
          </p>
         
         :
-        <p class="mt-4 text-gray-600">
+        <p className="mt-4 text-gray-600">
         Get the most accurate crypto data, <br/>
         check current prices, last price changes,<br/>
         all time highest/lowest prices and so much more!<br/>
@@ -47,12 +47,12 @@ function Welcome() {
         {user ?
          
         <a
-          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-blue-300 border border-blue-400 rounded hover:bg-transparent hover:text-blue-400 active:text-blue-400 focus:outline-none focus:ring"
+          className="inline-flex items-center px-8 py-3 mt-8 text-white bg-blue-300 border border-blue-400 rounded hover:bg-transparent hover:text-blue-400 active:text-blue-400 focus:outline-none focus:ring"
           href="/crypto">
-          <span class="text-sm font-medium"> View crypto </span>
+          <span className="text-sm font-medium"> View crypto </span>
 
           <svg
-            class="w-5 h-5 ml-3"
+            className="w-5 h-5 ml-3"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -68,13 +68,13 @@ function Welcome() {
         </a>
         :
         <a
-          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-blue-300 border border-blue-400 rounded hover:bg-transparent hover:text-blue-400 active:text-blue-400 focus:outline-none focus:ring"
+          className="inline-flex items-center px-8 py-3 mt-8 text-white bg-blue-300 border border-blue-400 rounded hover:bg-transparent hover:text-blue-400 active:text-blue-400 focus:outline-none focus:ring"
           href="/login"
         >
-          <span class="text-sm font-medium"> Get Started </span>
+          <span className="text-sm font-medium"> Get Started </span>
 
           <svg
-            class="w-5 h-5 ml-3"
+            className="w-5 h-5 ml-3"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -94,30 +94,30 @@ function Welcome() {
   </div>
 </section>
 <section>
-  <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
-      <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full">
+  <div className="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
+      <div className="relative z-10 lg:py-16">
+        <div className="relative h-64 sm:h-80 lg:h-full">
           <img
-            class="absolute inset-0 object-cover w-full h-full"
+            className="absolute inset-0 object-cover w-full h-full"
             src="https://images.unsplash.com/photo-1645731504303-860e0da74fee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
             alt="Indoors house"
           />
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-100">
+      <div className="relative flex items-center bg-gray-100">
         <span
-          class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"
+          className="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"
         ></span>
 
-        <div class="p-8 sm:p-16 lg:p-24">
-          <h2 class="text-2xl font-bold sm:text-3xl">
+        <div className="p-8 sm:p-16 lg:p-24">
+          <h2 className="text-2xl font-bold sm:text-3xl">
             Did you find a bug? <br />
             Maybe you want to get touch with us.
           </h2>
 
-          <p class="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
             molestiae! Quidem est esse numquam odio deleniti, beatae, magni
             dolores provident quaerat totam eos, aperiam architecto eius quis
@@ -125,7 +125,7 @@ function Welcome() {
           </p>
 
           <a
-            class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-blue-300 border border-blue-400 rounded active:text-indigo-400 hover:bg-transparent hover:text-blue-400 focus:outline-none focus:ring"
+            className="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-blue-300 border border-blue-400 rounded active:text-indigo-400 hover:bg-transparent hover:text-blue-400 focus:outline-none focus:ring"
             href="/contact"
           >
             Get in Touch

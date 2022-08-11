@@ -52,8 +52,8 @@ function AllCryptoDetails() {
                         <a href={cryptoData.links.homepage[0]} className='underline font-extrabold'>Visit official {cryptoData.name} website </a>
                         <a href={cryptoData.links.official_forum_url[0]} className='underline font-extrabold'>Visit official {cryptoData.name} community forum </a>
                     </div>
-                    <div className='showCryptoFooter'>
-                        <p className='text-sm'><b>Last update:</b> {cryptoData.last_updated}</p>
+                    <div>
+                        <p className='text-sm mb-10'><b>Last update:</b> {cryptoData.last_updated}</p>
                     </div>
                 </div>
 
