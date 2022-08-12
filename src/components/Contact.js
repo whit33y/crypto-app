@@ -15,7 +15,10 @@ function Contact() {
         <h2 class="text-3xl font-bold sm:text-4xl">Contact us</h2>
 
         <p class="mt-4 text-gray-600">
-          Press one of this buttons to copy our contact details. 
+          Fell free to get touch with us! <br/>
+          We are ready to answer your questions 24/7. <br/>
+          Press one of this buttons to copy our contact details.
+
         </p>
       </div>
 
