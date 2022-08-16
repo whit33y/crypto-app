@@ -6,28 +6,36 @@ import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
 
 function Crypto() {
+
     function searchEngine(cryptoName, searchContent, crypto_array){
         if(cryptoName.includes(searchContent)){
             crypto_array.push(cryptoName)
         }
     }
+
     const [cryptos, setCryptos] = useState(null)
     const [search, setSearch] = useState('')
     const [searchedCryptos, setSearchedCryptos] = useState()
+
     const cryptoNames = []
     let findedCryptos = []
+
     useEffect(()=>{
         fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
         .then((res)=> res.json())
         .then((data)=>setCryptos(data))
+        
     },[])
+
     useEffect(()=>{
         findedCryptos = []
         for(let i=0; i<cryptoNames.length; i++){
             searchEngine(cryptoNames[i], search, findedCryptos)
         }
         setSearchedCryptos(findedCryptos)
+
     },[search])
+
     if(!cryptos)
     {
         return(
@@ -42,6 +50,7 @@ function Crypto() {
         
         <div className='container mx-auto'>
             <Navbar />
+        
             <div>
                 <form>
                 <div className="flex justify-center relative mb-3">
@@ -56,6 +65,7 @@ function Crypto() {
 
         })} 
         </div>
+
         <Footer />
         {cryptos  && cryptos.map(data=>{
             cryptoNames.push(data.name.toLowerCase())
