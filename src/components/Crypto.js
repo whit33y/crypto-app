@@ -27,7 +27,6 @@ function Crypto() {
             searchEngine(cryptoNames[i], search, findedCryptos)
         }
         setSearchedCryptos(findedCryptos)
-
     },[search])
     if(!cryptos)
     {
