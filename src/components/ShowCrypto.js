@@ -7,6 +7,7 @@ function ShowCrypto(props) {
     function handleDetails(){
         setDetails(current => !current)
     }
+    console.log(props.searched_cryptos)
     return (
     <div className="flex flex-col mb-10">
         <img src={`${props.image}`} className='h-30 w-40 mx-auto'/>

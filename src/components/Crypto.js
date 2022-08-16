@@ -9,22 +9,25 @@ function Crypto() {
     function searchEngine(cryptoName, searchContent, crypto_array){
         if(cryptoName.includes(searchContent)){
             crypto_array.push(cryptoName)
-            console.log(crypto_array)
         }
     }
     const [cryptos, setCryptos] = useState(null)
     const [search, setSearch] = useState('')
+    const [searchedCryptos, setSearchedCryptos] = useState()
     const cryptoNames = []
-    const findedCryptos = []
+    let findedCryptos = []
     useEffect(()=>{
         fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
         .then((res)=> res.json())
         .then((data)=>setCryptos(data))
     },[])
     useEffect(()=>{
+        findedCryptos = []
         for(let i=0; i<cryptoNames.length; i++){
             searchEngine(cryptoNames[i], search, findedCryptos)
         }
+        setSearchedCryptos(findedCryptos)
+
     },[search])
     if(!cryptos)
     {
@@ -47,11 +50,11 @@ function Crypto() {
                 </div>
                 </form>
         {cryptos  && cryptos.map(data=>{
-
-            return <ShowCrypto 
+                return <ShowCrypto 
                 name={data.name} current_price={data.current_price} image={data.image} 
                 highest_24h={data.high_24h}lowest_24h={data.low_24h} price_change_percentage_24h={data.price_change_percentage_24h} symbol={data.symbol} ath={data.ath} atl={data.atl}
-                ath_date={data.ath_date} price_change_24h={data.price_change_24h} last_updated={data.last_updated} id={data.id}/>
+                ath_date={data.ath_date} price_change_24h={data.price_change_24h} last_updated={data.last_updated} id={data.id} searched_cryptos={searchedCryptos}/>
+
         })} 
         </div>
         <Footer />

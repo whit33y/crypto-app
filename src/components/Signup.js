@@ -45,9 +45,10 @@ export function Signup(){
                 <label className="block text-xs font-medium text-gray-500" htmlFor='input-password'> Password </label>
                 <input className="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-password' type='password' ref={passwordRef} />
             </div>
-                <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-1xl'>Sign up</button>
-            <p className='text-bold'>
-                Already have an account? <Link to="/login" className='underline'>Log In</Link>
+                <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-1xl mb-3'>Sign up</button>
+            <p className='text-bold text-xl'>
+                Already have an account? <Link to="/login" className='underline'>Log In</Link><br/>
+                <span className='font-medium'>You must be logged in to acces our exclusive crypto info</span>
             </p>
             </form>
             

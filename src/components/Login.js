@@ -50,7 +50,7 @@ export function Login(){
                 <input className="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-password' type='password' ref={passwordRef} />
             </div>
                 <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-1xl mb-3'>Login</button>
-                <p className='text-1xl'>Don't have an account? <Link to="/signup" className='underline'>Sign up</Link><br/>You must be logged in to acces our exclusive crypto info</p>
+                <p className='text-xl'>Don't have an account? <Link to="/signup" className='underline'>Sign up</Link><br/><span className='font-medium'>You must be logged in to acces our exclusive crypto info</span></p>
             </form>
             <Footer />
             </div>}
