@@ -9,7 +9,8 @@ function ShowCrypto(props) {
     }
     
     return (
-    <div className={ props.searched_cryptos.includes(props.name.toLowerCase()) ? 'block flex flex-col mb-10' : 'hidden'}>
+
+    <div  className={ props.searched_cryptos.includes(props.name.toLowerCase()) || props.searched_cryptos.length == 0 ? 'block flex flex-col mb-10' : 'hidden'}>
         <img src={`${props.image}`} className='h-30 w-40 mx-auto'/>
         <h3 className='text-center text-3xl'>{props.name}</h3>
     <div className="flex justify-center">
