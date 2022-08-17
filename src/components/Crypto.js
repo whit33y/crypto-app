@@ -53,7 +53,7 @@ function Crypto() {
             <div>
                 <form>
                 <div className="flex justify-center relative mb-3">
-                    <input className="w-half p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-search' type='text' onChange={event=> setSearch(event.target.value.toLowerCase())} placeholder='search for crypto'/>
+                    <input className="w-half p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-search' type='text' onChange={event=> setSearch(event.target.value.toLowerCase())} placeholder='search for crypto...'/>
                 </div>
                 </form>
         {cryptos  && cryptos.map(data=>{
