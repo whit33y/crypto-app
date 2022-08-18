@@ -25,18 +25,18 @@ function About() {
 
       <div class="lg:py-16">
         <article class="space-y-4 text-gray-600 ">
-          <p className='font-bold'>About site:</p>
+          <p className='font-bold'>About site <span class="material-symbols-outlined">language</span></p>
           <p>
             First about the site. It is my first real project in React. It includes many things that I learn
             in last months. I enjoyed every single minute working on this and I hope you will also
             like to test it. 
           </p>
-          <p className='font-bold'>About me:</p>
+          <p className='font-bold'>About me <span class="material-symbols-outlined">emoji_people</span></p>
           <p>
             My name is Jackob. I'm 21 years old and I come from Poland. My goal while I was making this project was
             to learn and capture as much knowledge as possible. It took around 1 month of  almost everyday programming.
           </p>
-          <p className='font-bold'>Used in this project:</p>
+          <p className='font-bold'>Used in this project <span class="material-symbols-outlined">supervised_user_circle</span></p>
           <p>
             Technologies used in this project: <span className='underline'>React, JS, HTML, CSS, Tailwind.</span> 
             <br/>Photos, fonts, icons and styles: <span className='underline'>Unsplash, Google fonts/icons, hyperui.</span>
