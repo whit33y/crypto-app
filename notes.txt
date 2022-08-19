@@ -224,3 +224,23 @@ export default Crypto
     </div>
   </div>
 </header>
+
+
+    function searchEngine(cryptoName, searchContent, crypto_array){
+        if(cryptoName.includes(searchContent)){
+            // cosnt newArray = [...crypto_array, cryptoName]
+            crypto_array.push(cryptoName)
+        }
+    }
+
+    // useEffect(()=>{
+    //     findedCryptos = []
+    //     for(let i=0; i<cryptoNames.length; i++){
+    //         searchEngine(cryptoNames[i], search, findedCryptos)
+    //     }
+    //     setSearchedCryptos(findedCryptos)
+
+    // },[search])
+          {/* {searchedCryptos  && searchedCryptos.map(data=>{
+            cryptoNames.push(data.name.toLowerCase())
+        })}  */}

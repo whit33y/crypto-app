@@ -1,8 +1,8 @@
 import './App.css'
 import React from 'react'
 
-import {Login} from './components/Login'
-import {Signup} from './components/Signup'
+import { Login } from './components/Login'
+import { Signup } from './components/Signup'
 import Welcome from './components/Welcome'
 import Crypto from './components/Crypto'
 import About from './components/About'
@@ -19,18 +19,18 @@ function App() {
 
   return (
     <AuthProvider>
-    <Router>
-      <Routes>
-        <Route path='/' element={<Welcome />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/crypto' element={<ProtectedRoute><Crypto /></ProtectedRoute>} />
-        <Route path='/alldetails' element={<ProtectedRoute><AllCryptoDetails /></ProtectedRoute>}/>
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Welcome />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/crypto' element={<ProtectedRoute><Crypto /></ProtectedRoute>} />
+          <Route path='/alldetails' element={<ProtectedRoute><AllCryptoDetails /></ProtectedRoute>} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </Router>
     </AuthProvider>
   );
 }
