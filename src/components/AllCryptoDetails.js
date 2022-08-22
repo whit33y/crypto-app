@@ -33,7 +33,7 @@ function AllCryptoDetails() {
             <div className='container flex flex-col h-screen justify-between mx-auto text-center mb-10'>
                 <button className='font-extrabold'><a href='/crypto'>Click here to go back<span className="material-symbols-outlined font-extrabold">arrow_back</span></a></button>
                 <div className='flex flex-col justify-center mb-2'>
-                    <img src={`${cryptoData.image.large}`} className='h-48 w-48 mx-auto' />
+                    <img src={`${cryptoData.image.large}`} className='h-48 w-48 mx-auto' alt={`${cryptoData.name} crypto`} />
                     <p className='text-2xl font-bold'>{cryptoData.name} - {cryptoData.symbol}</p>
                     <p className='text-sm'><b>Market rank: </b>{cryptoData.market_cap_rank} {cryptoData.market_cap_rank === 1 ? '🥇' : ''} {cryptoData.market_cap_rank === 2 ? '🥈' : ''} {cryptoData.market_cap_rank === 3 ? '🥉' : ''}</p>
                 </div>
