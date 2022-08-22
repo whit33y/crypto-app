@@ -30,14 +30,14 @@ function AllCryptoDetails() {
         <div className='container flex flex-col h-screen justify-between mx-auto'>
             <Navbar />
 
-            <div className='container flex flex-col h-screen justify-between mx-auto text-center'>
+            <div className='container flex flex-col h-screen justify-between mx-auto text-center mb-10'>
                 <button className='font-extrabold'><a href='/crypto'>Click here to go back<span className="material-symbols-outlined font-extrabold">arrow_back</span></a></button>
-                <div className='flex flex-col justify-center'>
+                <div className='flex flex-col justify-center mb-2'>
                     <img src={`${cryptoData.image.large}`} className='h-48 w-48 mx-auto' />
                     <p className='text-2xl font-bold'>{cryptoData.name} - {cryptoData.symbol}</p>
-                    <p className='text-sm'><b>Market rank:</b>{cryptoData.market_cap_rank}</p>
+                    <p className='text-sm'><b>Market rank: </b>{cryptoData.market_cap_rank} {cryptoData.market_cap_rank === 1 ? '🥇' : ''} {cryptoData.market_cap_rank === 2 ? '🥈' : ''} {cryptoData.market_cap_rank === 3 ? '🥉' : ''}</p>
                 </div>
-                <div className='flex flex-col justify-center text-center text-lg'>
+                <div className='flex flex-col justify-center text-center text-lg mb-2'>
                     <hr />
                     <b><p>Latest price changes</p></b>
                     <p><b>Highest price(24h):</b> {cryptoData.market_data.high_24h.usd} USD 🇺🇸<br /><b>Lowest price(24h):</b> {cryptoData.market_data.low_24h.usd} USD 🇺🇸<br /><b>Price change(24h):</b> {Math.floor(cryptoData.market_data.price_change_24h_in_currency.usd * 1000) / 1000} USD 🇺🇸</p>
@@ -51,14 +51,12 @@ function AllCryptoDetails() {
                 <div className='flex flex-col justify-center'>
                     <a href={cryptoData.links.homepage[0]} className='underline font-extrabold'>Visit official {cryptoData.name} website </a>
                     <a href={cryptoData.links.official_forum_url[0]} className='underline font-extrabold'>Visit official {cryptoData.name} community forum </a>
-                </div>
-                <div>
-                    <p className='text-sm mb-10'><b>Last update:</b> {cryptoData.last_updated}</p>
+                    <p className='text-sm'><b>Last update:</b> {cryptoData.last_updated}</p>
                 </div>
             </div>
 
             <Footer />
-        </div>
+        </div >
     );
 }
 

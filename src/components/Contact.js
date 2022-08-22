@@ -15,7 +15,7 @@ function Contact() {
               <h2 class="text-3xl font-bold sm:text-4xl">Contact us</h2>
 
               <p class="mt-4 text-gray-600">
-                Fell free to get touch with us! <br />
+                Fell free to get touch with us whenever you want!<br />
                 We are ready to answer your questions 24/7. <br />
                 Press one of this buttons to copy our contact details.
 
@@ -30,12 +30,13 @@ function Contact() {
                   <span class="material-symbols-outlined">
                     call
                   </span>
+
                 </span>
 
                 <h6 class="mt-2 font-bold">Telephone</h6>
 
                 <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                  +48111222333
+                  +48-111-222-333
                 </p>
               </button>
 
@@ -56,17 +57,11 @@ function Contact() {
               </button>
 
               <button
-                class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-blue-300 hover:ring-1 hover:ring-blue-300"
-                href="/accountant"
-              >
+                class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-blue-300 hover:ring-1 hover:ring-blue-300">
                 <span class="inline-block p-3 rounded-lg bg-gray-50">
-                  <span class="material-symbols-outlined">
-                    location_on
-                  </span>
+                  <span class="material-symbols-outlined">location_on</span>
                 </span>
-
                 <h6 class="mt-2 font-bold">Address</h6>
-
                 <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                   Colorado, USA
                 </p>

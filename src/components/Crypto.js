@@ -24,8 +24,6 @@ function Crypto() {
         setSearchedCryptos(filteredCryptos)
     }, [search])
 
-    console.log(searchedCryptos)
-
     if (!cryptos) {
         return (
             <div className='container mx-auto'>
@@ -46,13 +44,13 @@ function Crypto() {
                         <input className="w-half p-3 mt-1 text-lg border-2 border-gray-200 rounded" id='input-search' type='text' onChange={event => setSearch(event.target.value.toLowerCase())} placeholder='search for crypto...' />
                     </div>
                 </form>
-                <main className="flex gap-20 justify-center flex-wrap md:justify-between mx-40">
+                <main className="flex gap-20 justify-center flex-wrap md:justify-center mx-40">
+
                     {searchedCryptos && searchedCryptos.map(data => {
                         return <ShowCrypto
                             name={data.name} current_price={data.current_price} image={data.image}
                             highest_24h={data.high_24h} lowest_24h={data.low_24h} price_change_percentage_24h={data.price_change_percentage_24h} symbol={data.symbol} ath={data.ath} atl={data.atl}
-                            ath_date={data.ath_date} price_change_24h={data.price_change_24h} last_updated={data.last_updated} id={data.id} searched_cryptos={searchedCryptos} />
-
+                            ath_date={data.ath_date} price_change_24h={data.price_change_24h} last_updated={data.last_updated} id={data.id} searched_cryptos={searchedCryptos} key={data.id} />
                     })}
                 </main>
             </div>
