@@ -43,10 +43,10 @@ function Crypto() {
             <div className='mb-10'>
                 <form>
                     <div className="flex justify-center relative mb-3">
-                        <input className="w-half p-3 mt-1 text-sm border-2 border-gray-200 rounded" id='input-search' type='text' onChange={event => setSearch(event.target.value.toLowerCase())} placeholder='search for crypto...' />
+                        <input className="w-half p-3 mt-1 text-lg border-2 border-gray-200 rounded" id='input-search' type='text' onChange={event => setSearch(event.target.value.toLowerCase())} placeholder='search for crypto...' />
                     </div>
                 </form>
-                <main className="flex gap-20 justify-center flex-wrap md:justify-between ">
+                <main className="flex gap-20 justify-center flex-wrap md:justify-between mx-40">
                     {searchedCryptos && searchedCryptos.map(data => {
                         return <ShowCrypto
                             name={data.name} current_price={data.current_price} image={data.image}
