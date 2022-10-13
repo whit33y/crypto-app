@@ -20,7 +20,7 @@ Details page
 </p>
 List page
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/31563900/194932691-29c3de66-4e68-443f-be83-05ab9bd25f62.png" alt="Screen shot">
+    <img src="https://user-images.githubusercontent.com/31563900/195564778-8b5c6ef9-ba8b-4994-b538-cad48752b181.png" alt="Screen shot">
 </p>
 
 ## Instalation 💻
