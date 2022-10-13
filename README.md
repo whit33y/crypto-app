@@ -16,7 +16,7 @@ Home page #2
 </p>
 Details page
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/31563900/195563630-780703ce-3d77-4fc1-b2f8-77189ff668c7.png" alt="Screen shot">
+    <img src="https://user-images.githubusercontent.com/31563900/195564987-83aa650b-bd25-434d-949f-e2d3ea12c183.png" alt="Screen shot">
 </p>
 List page
 <p align="center">
